@@ -1128,7 +1128,7 @@ function getPendencias(){
   if(!$('sel-colaborador').value) p.push('Selecione o técnico/colaborador');
   if(!$('inp-data').value) p.push('Informe a data');
   if(!$('inp-item').value.trim()) p.push('Descreva o item');
-  if(!assinaturas.supervisor) p.push('Confirme a assinatura do supervisor');
+  if(!assinaturas.supervisor) p.push('Confirme a assinatura do responsável');
   if(!assinaturas.colaborador) p.push('Confirme a assinatura do colaborador');
   return p;
 }
@@ -1181,7 +1181,7 @@ function buildDocumentPreview(){
         <div class="cap"><b>FOTO ${i+1}</b>${f.desc.trim()?' — '+esc(f.desc.trim()):''}</div></div>`;
     }).join('')}</div>` : `<div style="margin-top:10px;font-size:12px;"><b>FOTOS ANEXADAS:</b> 0</div>`}
     <div class="doc-sign-area">
-      <div class="sig">${assinaturas.supervisor?`<img src="${assinaturas.supervisor}">`:'<div style="height:70px;"></div>'}<div class="line">ASSINATURA DO SUPERVISOR</div></div>
+      <div class="sig">${assinaturas.supervisor?`<img src="${assinaturas.supervisor}">`:'<div style="height:70px;"></div>'}<div class="line">ASSINATURA DO RESPONSÁVEL</div></div>
       <div class="sig">${assinaturas.colaborador?`<img src="${assinaturas.colaborador}">`:'<div style="height:70px;"></div>'}<div class="line">ASSINATURA DO COLABORADOR</div></div>
     </div>`;
 
